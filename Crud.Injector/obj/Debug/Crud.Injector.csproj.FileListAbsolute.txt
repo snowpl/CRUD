@@ -1,7 +1,0 @@
-C:\Users\BratKacpra\documents\visual studio 2015\Projects\Crud\Crud.Injector\bin\Debug\Crud.Injector.dll
-C:\Users\BratKacpra\documents\visual studio 2015\Projects\Crud\Crud.Injector\bin\Debug\Crud.Injector.pdb
-C:\Users\BratKacpra\documents\visual studio 2015\Projects\Crud\Crud.Injector\bin\Debug\Ninject.dll
-C:\Users\BratKacpra\documents\visual studio 2015\Projects\Crud\Crud.Injector\bin\Debug\Ninject.xml
-C:\Users\BratKacpra\documents\visual studio 2015\Projects\Crud\Crud.Injector\obj\Debug\Crud.Injector.csprojResolveAssemblyReference.cache
-C:\Users\BratKacpra\documents\visual studio 2015\Projects\Crud\Crud.Injector\obj\Debug\Crud.Injector.dll
-C:\Users\BratKacpra\documents\visual studio 2015\Projects\Crud\Crud.Injector\obj\Debug\Crud.Injector.pdb

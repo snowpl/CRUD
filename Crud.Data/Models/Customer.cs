@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Crud.Data.Models
 {
-    [Table("Customer")]
+    
     public class Customer
     {
         [Key]

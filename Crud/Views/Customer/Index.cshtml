@@ -1,0 +1,37 @@
+﻿@model IEnumerable<Crud.Models.CustomerViewModel>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    Wykonano prostego CRUDa, jednak zmęczenie po pracy zrobiło swoje.
+</p>
+
+
+
+@Html.ActionLink("Create", "Create")
+<table class="table">
+    <thead>
+        <tr>
+            <th>Imię</th>
+            <th>Nazwisko</th>
+            <th>Email</th>
+            <th>Adres</th>
+        </tr>
+    </thead>
+    <tbody class="tbodyAuthor">
+        <tr>
+            @foreach (var item in @Model)
+            {
+
+                <td>@Html.DisplayTextFor(p => item.Name)</td>
+                <td>@Html.DisplayTextFor(p => item.Surname)</td>
+                <td>@Html.DisplayTextFor(p => item.TelephoneNumber)</td>
+                <td>@Html.DisplayTextFor(p => item.Address)</td>
+                <td>@Html.ActionLink("Edit", "Edit", new { Id = item.Id })</td>
+            }
+        </tr>
+    </tbody>
+</table>

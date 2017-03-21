@@ -53,19 +53,15 @@
     <Compile Include="Models\CrudDBContext.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositories\CustomerCommandRepository.cs" />
-    <Compile Include="Repositories\CustomerQueryRepository.cs" />
-    <Compile Include="UnitOfWorkFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="..\IData\Crud.IData.csproj">
-      <Project>{8FECF146-5347-4D4C-9B24-5147F7C1842B}</Project>
-      <Name>Crud.IData</Name>
+    <ProjectReference Include="..\Crud.DTO\Crud.DTO.csproj">
+      <Project>{F412BBD6-18F7-4DA3-89F7-F6011DF10172}</Project>
+      <Name>Crud.DTO</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

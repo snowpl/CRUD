@@ -1,49 +1,33 @@
-﻿using Crud.Data.Models;
-using IData.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Crud.DTO;
+using Crud.Data.Models;
 
 namespace Crud.Data.Mappings
 {
-    internal static class CustomerDTOMappings
+    public static class CustomerDTOMappings
     {
-        public static CustomerDTO Map(this Customer source, CustomerDTO target)
-        {
-            target.Address = source.Address;
-            target.Id = source.Id;
-            target.Name = source.Name;
-            target.Surname = source.Surname;
-            target.TelephoneNumber = source.TelephoneNumber;
-
-            return target;
-        }
-
-        public static Customer Map(this CustomerDTO source, Customer target)
-        {
-            target.Address = source.Address;
-            target.Id = source.Id;
-            target.Name = source.Name;
-            target.Surname = source.Surname;
-            target.TelephoneNumber = source.TelephoneNumber;
-
-            return target;
-        }
-
-        public static CustomerDTO MapToCustomerDTO(Customer source)
+        public static CustomerDTO Map(this Customer source)
         {
             var target = new CustomerDTO();
 
-            return Map(source, target);
+            target.Address = source.Address;
+            target.Id = source.Id;
+            target.Name = source.Name;
+            target.Surname = source.Surname;
+            target.TelephoneNumber = source.TelephoneNumber;
+
+            return target;
         }
 
-        public static Customer MapToCustomer(CustomerDTO source)
+        public static Customer Map(this CustomerDTO source)
         {
             var target = new Customer();
+            target.Address = source.Address;
+            target.Id = source.Id;
+            target.Name = source.Name;
+            target.Surname = source.Surname;
+            target.TelephoneNumber = source.TelephoneNumber;
 
-            return Map(source, target);
+            return target;
         }
     }
 }

@@ -1,38 +1,38 @@
 ﻿using Crud.IServices.Command;
-using System;
-using IData.Entities;
 using IData.Interfaces.Command;
-using IData.Interfaces;
+using Crud.Data.Models;
+using Crud.DTO;
+using Crud.Data.Mappings;
 
 namespace Services.Command
 {
     public class CustomerCommandService : ICustomerCommandService
     {
         private readonly ICustomerCommandRepository _customerCommandRepository;
-        private readonly IUnitOfWorkFactory _unitOfWorkFactory;
 
-        public CustomerCommandService(ICustomerCommandRepository customerCommandRepository, IUnitOfWorkFactory unitOfWorkFactory)
+        public CustomerCommandService(ICustomerCommandRepository customerCommandRepository)
         {
             _customerCommandRepository = customerCommandRepository;
-            _unitOfWorkFactory = unitOfWorkFactory;
         }
 
         public void AddNewCustomer(CustomerDTO customer)
         {
-            _customerCommandRepository.AddNewCustomer(customer);
-            _unitOfWorkFactory.SaveChanges();
+            _customerCommandRepository.AddNewCustomer(customer.Map());
+            _customerCommandRepository.Save();
         }
 
-        public void DeleteCustomer(int Id)
+        public void DeleteCustomer(int id)
         {
-            _customerCommandRepository.DeleteCustomer(Id);
-            _unitOfWorkFactory.SaveChanges();
+            _customerCommandRepository.DeleteCustomer(id);
+            _customerCommandRepository.Save();
         }
 
-        public void EditCustomer(CustomerDTO customer)
+        public CustomerDTO EditCustomer(CustomerDTO customer)
         {
-            _customerCommandRepository.EditCustomer(customer);
-            _unitOfWorkFactory.SaveChanges();
+            var result = _customerCommandRepository.EditCustomer(customer.Map());
+            _customerCommandRepository.Save();
+
+            return result;
         }
     }
 }

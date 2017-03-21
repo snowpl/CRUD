@@ -1,5 +1,5 @@
-﻿using Crud.Data.Models;
-using IData.Entities;
+﻿using Crud.DTO;
+using Crud.Data.Models;
 
 namespace Services.Mappings
 {

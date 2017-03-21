@@ -1,16 +1,12 @@
-﻿using IData.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Crud.Data.Models;
+using Crud.DTO;
 
 namespace Crud.IServices.Command
 {
     public interface ICustomerCommandService
     {
         void AddNewCustomer(CustomerDTO customer);
-        void EditCustomer(CustomerDTO customer);
-        void DeleteCustomer(int Id);
+        CustomerDTO EditCustomer(CustomerDTO customer);
+        void DeleteCustomer(int id);
     }
 }

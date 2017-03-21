@@ -50,13 +50,17 @@
       <Project>{9BEA06DE-417F-44AB-B9D2-68194A62FDB4}</Project>
       <Name>Crud.Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Crud.DTO\Crud.DTO.csproj">
+      <Project>{f412bbd6-18f7-4da3-89f7-f6011df10172}</Project>
+      <Name>Crud.DTO</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Crud.IServices\Crud.IServices.csproj">
       <Project>{238D3B7F-E0B2-41F6-A6AB-0FAEAA873E3E}</Project>
       <Name>Crud.IServices</Name>
     </ProjectReference>
-    <ProjectReference Include="..\IData\Crud.IData.csproj">
+    <ProjectReference Include="..\IData\Crud.IRepository.csproj">
       <Project>{8FECF146-5347-4D4C-9B24-5147F7C1842B}</Project>
-      <Name>Crud.IData</Name>
+      <Name>Crud.IRepository</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

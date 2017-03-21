@@ -1,9 +1,5 @@
-﻿using IData.Entities;
-using System;
+﻿using Crud.DTO;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace IData.Interfaces.Command
 {
