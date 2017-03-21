@@ -1,0 +1,5 @@
+C:\Users\BratKacpra\documents\visual studio 2015\Projects\Crud\Crud.IServices\bin\Debug\Crud.IServices.dll
+C:\Users\BratKacpra\documents\visual studio 2015\Projects\Crud\Crud.IServices\bin\Debug\Crud.IServices.pdb
+C:\Users\BratKacpra\documents\visual studio 2015\Projects\Crud\Crud.IServices\obj\Debug\Crud.IServices.csprojResolveAssemblyReference.cache
+C:\Users\BratKacpra\documents\visual studio 2015\Projects\Crud\Crud.IServices\obj\Debug\Crud.IServices.dll
+C:\Users\BratKacpra\documents\visual studio 2015\Projects\Crud\Crud.IServices\obj\Debug\Crud.IServices.pdb
