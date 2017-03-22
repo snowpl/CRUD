@@ -66,10 +66,9 @@ namespace Crud.Controllers
             return View(customer);
         }
 
-        [HttpPost]
-        public ActionResult Delete(int userId)
+        public ActionResult Delete(int id)
         {
-            _customerCommandService.DeleteCustomer(userId);
+            _customerCommandService.DeleteCustomer(id);
             return RedirectToAction("Index");
         }
 
