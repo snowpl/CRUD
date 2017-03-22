@@ -9,21 +9,22 @@ using System.Threading.Tasks;
 namespace Crud.Data.Models
 {
     
-    public class Customer
+    public class Customer : IEntity
     {
-        [Key]
-        public int Id { get; set; }
 
-        [Required]
-        [StringLength(50)]
-        public string Name { get; set; }
-
-        [Required]
-        public string Surname { get; set; }
-
-        public int TelephoneNumber { get; set; }
-
-        public string Address { get; set; }
+        #region IEntity
+        public virtual int Id { get; set; }
+               
+        public virtual DateTime? CreateDate { get; set; }
+        #endregion
+               
+        public virtual string Name { get; set; }
+               
+        public virtual string Surname { get; set; }
+               
+        public virtual int TelephoneNumber { get; set; }
+               
+        public virtual string Address { get; set; }
 
     }
 }

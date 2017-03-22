@@ -1,8 +1,14 @@
-﻿namespace Crud.DTO
+﻿using System;
+
+namespace Crud.DTO
 {
-    public class CustomerDTO
+    public class CustomerDTO : IModel
     {
-        public int Id { get; set; }
+        #region IEntity
+        public virtual int Id { get; set; }
+
+        public virtual DateTime? CreateDate { get; set; }
+        #endregion
 
         public string Name { get; set; }
 

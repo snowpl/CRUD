@@ -24,26 +24,54 @@ namespace Crud.Controllers
         {
             var customers = _customerQueryService.GetAll();
 
-            var result = new List<CustomerViewModel>();
-
-            result = customers.Select(x => Convert(x)).ToList();
+            var result = customers.Select(x => Convert(x)).ToList();
 
             return View(result);
         }
 
+        public ActionResult Create()
+        {
+            return View(new CustomerViewModel());
+        }
+
+        [HttpPost]
+        public ActionResult Create(CustomerViewModel model)
+        {
+            if (!this.ModelState.IsValid)
+                return SendErrorsToClientAsJson();
+
+            _customerCommandService.AddNewCustomer(Convert(model));
+
+            return Json(new { Result = "OK", Location = Url.Action("Index") });
+        }
+
+
         [HttpPost]
         public ActionResult Edit(CustomerViewModel customerVM)
         {
+            if (!this.ModelState.IsValid)
+                return SendErrorsToClientAsJson();
+
             var customers = _customerCommandService.EditCustomer(Convert(customerVM));
 
-            return View(customers);
+            return Json(new { Result = "OK", Location = Url.Action("Index") });
         }
 
-        public ActionResult Edit(int userId)
+        public ActionResult Edit(int id)
         {
-            return null;
+            var customerDTO = _customerQueryService.GetCustomerById(id);
+
+            var customer = Convert(customerDTO);
+
+            return View(customer);
         }
 
+        [HttpPost]
+        public ActionResult Delete(int userId)
+        {
+            _customerCommandService.DeleteCustomer(userId);
+            return RedirectToAction("Index");
+        }
 
         private CustomerViewModel Convert(CustomerDTO customer)
         {
@@ -70,5 +98,6 @@ namespace Crud.Controllers
             };
             return customerVM;
         }
+
     }
 }

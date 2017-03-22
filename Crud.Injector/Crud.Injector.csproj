@@ -66,6 +66,14 @@
       <Project>{238d3b7f-e0b2-41f6-a6ab-0faeaa873e3e}</Project>
       <Name>Crud.IServices</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Crud.Repository\Crud.Repository.csproj">
+      <Project>{2BC8B2B2-A8AC-4220-8B4E-58233D76B9BB}</Project>
+      <Name>Crud.Repository</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IData\Crud.IRepository.csproj">
+      <Project>{8FECF146-5347-4D4C-9B24-5147F7C1842B}</Project>
+      <Name>Crud.IRepository</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Services\Crud.Services.csproj">
       <Project>{928507f5-03e3-4146-baf5-b4156ce8dd14}</Project>
       <Name>Crud.Services</Name>

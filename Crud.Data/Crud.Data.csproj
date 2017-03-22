@@ -49,9 +49,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Configuration\CustomerConfiguration.cs" />
     <Compile Include="Mappings\CustomerDTOMapping.cs" />
     <Compile Include="Models\CrudDBContext.cs" />
     <Compile Include="Models\Customer.cs" />
+    <Compile Include="Configuration\EntityConfigurationBase.cs" />
+    <Compile Include="Models\IEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

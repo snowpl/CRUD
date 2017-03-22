@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using IData.Interfaces.Command;
 using Crud.DTO;
+using System;
 
 namespace Services
 {
@@ -17,6 +18,11 @@ namespace Services
         public List<CustomerDTO> GetAll()
         {
             return _cusotmerQueryRepository.GetAll();
+        }
+
+        public CustomerDTO GetCustomerById(int id)
+        {
+            return _cusotmerQueryRepository.GetCustomerById(id);
         }
     }
 }

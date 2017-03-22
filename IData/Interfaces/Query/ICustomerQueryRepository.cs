@@ -6,5 +6,6 @@ namespace IData.Interfaces.Command
     public interface ICustomerQueryRepository
     {
         List<CustomerDTO> GetAll();
+        CustomerDTO GetCustomerById(int id);
     }
 }

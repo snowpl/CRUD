@@ -1,5 +1,6 @@
 ﻿using Crud.DTO;
 using Crud.Data.Models;
+using System;
 
 namespace Crud.Data.Mappings
 {
@@ -10,6 +11,7 @@ namespace Crud.Data.Mappings
             var target = new CustomerDTO();
 
             target.Address = source.Address;
+            target.CreateDate = DateTime.Now;
             target.Id = source.Id;
             target.Name = source.Name;
             target.Surname = source.Surname;
@@ -22,6 +24,7 @@ namespace Crud.Data.Mappings
         {
             var target = new Customer();
             target.Address = source.Address;
+            target.CreateDate = DateTime.Now;
             target.Id = source.Id;
             target.Name = source.Name;
             target.Surname = source.Surname;

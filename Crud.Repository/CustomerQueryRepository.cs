@@ -17,19 +17,16 @@ namespace Crud.Repositories
 
         public List<CustomerDTO> GetAll()
         {
-            var result = from cust in _dbContext.Set<Customer>()
-                         select new CustomerDTO
-                         {
-                             Id = cust.Id,
-                             Name = cust.Name,
-                             Address = cust.Address,
-                             Surname = cust.Surname,
-                             TelephoneNumber = cust.TelephoneNumber
-                         };
-            return result.ToList();
+            var entity = _dbContext.Customer.Select(x => x);
+            var result = new List<CustomerDTO>();
+            foreach (var customer in entity)
+            {
+                result.Add(customer.Map());
+            }
+            return result;
         }
 
-        public CustomerDTO GetOneCustomer(int Id)
+        public CustomerDTO GetCustomerById(int Id)
         {
             var entity = _dbContext.Customer.FirstOrDefault(x => x.Id == Id);
             var result = entity.Map();

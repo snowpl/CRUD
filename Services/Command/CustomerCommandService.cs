@@ -17,7 +17,8 @@ namespace Services.Command
 
         public void AddNewCustomer(CustomerDTO customer)
         {
-            _customerCommandRepository.AddNewCustomer(customer.Map());
+            var customerDto = customer.Map();
+            _customerCommandRepository.AddNewCustomer(customerDto);
             _customerCommandRepository.Save();
         }
 
